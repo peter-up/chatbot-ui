@@ -8,18 +8,33 @@ export interface OpenAIModel {
 }
 
 export enum OpenAIModelID {
-  GPT_3_5 = 'gpt-3.5-turbo-0613',
-  GPT_3_5_16K = 'gpt-3.5-turbo-16k-0613',
+  GPT_3_5 = 'gpt-3.5-turbo',
+  GPT_3_5_16K = 'gpt-3.5-turbo-16k',
   GPT_3_5_instruct = 'gpt-3.5-turbo-instruct',
   GPT_3_5_AZ = 'gpt-35-turbo',
   GPT_4 = 'gpt-4',
   GPT_4_32K = 'gpt-4-32k',
+  GPT_4_128K = 'gpt-4-1106-preview',
+  GPT_3_5_16K_1106 = 'gpt-3.5-turbo-1106',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
 export const fallbackModelID = OpenAIModelID.GPT_3_5;
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
+ [OpenAIModelID.GPT_4_128K]: {
+    id: OpenAIModelID.GPT_4_128K,
+    name: 'GPT-4-1106-preview(knowledge 2023.4)',
+    maxLength: 500000,
+    tokenLimit: 4096,
+  },
+ [OpenAIModelID.GPT_3_5_16K_1106]: {
+    id: OpenAIModelID.GPT_3_5_16K_1106,
+    name: 'gpt-3.5-turbo-1106',
+    maxLength: 48000,
+    tokenLimit: 16000,
+  },
+  
   [OpenAIModelID.GPT_3_5]: {
     id: OpenAIModelID.GPT_3_5,
     name: 'GPT-3.5',
