@@ -5,6 +5,9 @@ export const DEFAULT_SYSTEM_PROMPT =
 export const OPENAI_API_HOST =
   process.env.OPENAI_API_HOST || 'https://api.openai.com';
 
+export const OPENAI_API_ENGPOINT =
+  process.env.OPENAI_API_ENGPOINT || 'https://gateway.ai.cloudflare.com/v1/97a08e87c51a74c68d0fd332369a2f94/test-openai/openai';
+
 export const DEFAULT_TEMPERATURE = 
   parseFloat(process.env.NEXT_PUBLIC_DEFAULT_TEMPERATURE || "1");
 
