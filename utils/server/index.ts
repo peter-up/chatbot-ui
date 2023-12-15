@@ -80,7 +80,7 @@ export const OpenAIStream = async (
       throw new Error(
         `OpenAI API returned an error: ${
           decoder.decode(result?.value) || result.statusText
-        }`,
+        } ${url} ${result}`,
       );
     }
   }
