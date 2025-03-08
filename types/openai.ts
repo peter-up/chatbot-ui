@@ -8,6 +8,7 @@ export interface OpenAIModel {
 }
 
 export enum OpenAIModelID {
+  GPT_3_5 = 'gpt-3.5'
   GPT_4O_MINI = 'gpt-4o-mini',
   GPT_B8MgChTQ = 'ft:gpt-4o-mini-2024-07-18:cocosoft-technology-pte-ltd::B8MgChTQ',
   GPT_B8NmQ5OW = 'ft:gpt-4o-mini-2024-07-18:cocosoft-technology-pte-ltd::B8NmQ5OW',
@@ -17,7 +18,12 @@ export enum OpenAIModelID {
 export const fallbackModelID = OpenAIModelID.GPT_4O_MINI;
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
-
+  [OpenAIModelID.GPT_3_5]: {
+    id: OpenAIModelID.GPT_3_5,
+    name: 'GPT-3.6',
+    maxLength: 16000,
+    tokenLimit: 16000,
+  },
   [OpenAIModelID.GPT_4O_MINI]: {
     id: OpenAIModelID.GPT_4O_MINI,
     name: 'GPT-4o-mini',
