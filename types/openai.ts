@@ -8,7 +8,7 @@ export interface OpenAIModel {
 }
 
 export enum OpenAIModelID {
-  GPT_3_5 = 'gpt-3.5'
+  GPT_3_5 = 'gpt-3.5',
   GPT_4O_MINI = 'gpt-4o-mini',
   GPT_B8MgChTQ = 'ft:gpt-4o-mini-2024-07-18:cocosoft-technology-pte-ltd::B8MgChTQ',
   GPT_B8NmQ5OW = 'ft:gpt-4o-mini-2024-07-18:cocosoft-technology-pte-ltd::B8NmQ5OW',
