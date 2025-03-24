@@ -12,6 +12,7 @@ export enum OpenAIModelID {
   GPT_4O_MINI = 'gpt-4o-mini',
   GPT_B8MgChTQ = 'ft:gpt-4o-mini-2024-07-18:cocosoft-technology-pte-ltd::B8MgChTQ',
   GPT_BCjeAQ2e = 'ft:gpt-4o-mini-2024-07-18:cocosoft-technology-pte-ltd::BCjeAQ2e',
+  GPT_BEStpuKW = 'ft:gpt-4o-2024-08-06:cocosoft-technology-pte-ltd::BEStpuKW',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
@@ -39,6 +40,12 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
   [OpenAIModelID.GPT_BCjeAQ2e]: {
     id: OpenAIModelID.GPT_BCjeAQ2e,
     name: 'GPT_BCjeAQ2e',
+    maxLength: 120000,
+    tokenLimit: 16000,
+  },
+  [OpenAIModelID.GPT_BEStpuKW]: {
+    id: OpenAIModelID.GPT_BEStpuKW,
+    name: 'GPT_BEStpuKW',
     maxLength: 120000,
     tokenLimit: 16000,
   },
